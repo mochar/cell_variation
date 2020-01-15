@@ -1,0 +1,41 @@
+## Dataset info 
+
+# Project name will be used to name the directory in which the file will be stored
+name: 'project_name'
+# Path to the loom file with spliced/unspliced/ambiguous counts
+loom_file: 'path/to/data.loom' 
+# Folder where data will be stored
+data_dir: 'path/to/data/dir'
+# Human (1) or mouse (1)
+human: 0 
+
+## Cleaning parameters
+
+# The lower percentile of cells that will be removed, based on the unspliced matrix
+cell_min_percentile: 0.01
+
+# The minimum count each gene should have
+min_expr_counts_s: 10
+min_expr_counts_u: -1
+
+# The minimum number of cells a gene should be expressed in
+min_cells_express_s: 20
+min_cells_express_u: 10
+
+
+## UMAP parameters
+
+# Train params
+n_neighbors: 30
+metric: 'correlation'
+min_dist: 0.1
+
+# Plot params
+umap_color: 'ClusterNameColumn'
+umap_legend: False
+umap_psize: 15
+
+
+## scHPF
+
+n_factors: 10

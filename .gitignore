@@ -1,0 +1,7 @@
+.snakemake/
+.vscode/
+.ipynb_checkpoints/
+data/*
+slurm-*.out
+Rplots.pdf
+config.yaml

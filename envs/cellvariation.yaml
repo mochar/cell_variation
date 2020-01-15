@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+dependencies:
+  - umap-learn=0.3.10
+  - seaborn=0.9.0
+  - loompy=2.0.17
