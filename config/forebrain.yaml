@@ -1,0 +1,62 @@
+## Dataset info 
+
+name: 'forebrain'
+loom_file: '../data/forebrain.loom' 
+data_dir: 'data'
+human: 1 # 1=human, 0=mouse
+
+## Cleaning parameters
+
+# The lower percentile of cells that will be removed, based on the unspliced matrix
+cell_min_percentile: 0.0
+
+# The minimum count each gene should have
+min_expr_counts_s: 30
+min_expr_counts_u: 25
+
+# The minimum number of cells a gene should be expressed in
+min_cells_express_s: 20
+min_cells_express_u: 20
+
+
+## UMAP parameters
+
+# Train params
+n_neighbors: 30
+metric: 'correlation'
+min_dist: 0.1
+
+# Plot params
+umap_color: 'Clusters'
+umap_legend: False
+umap_psize: 15
+
+
+## scHPF
+
+n_factors: 15
+
+
+## RNA velocity
+
+# Main parameters
+cluster_name: 'Clusters' # Column name clusters
+# n_pcs: 100
+k_imputation: 300
+
+# Detail parameters
+fit_offset: True
+trans_prob_transform: 'log'
+trans_prob_nn: 150
+shift_scaling: False
+arrows_smooth: 0.9
+arrows_steps: 50
+arrows_nn: 200
+
+
+## Ouija
+
+ngenes_per_factor: 10
+trajectory_factors: [8, 6, 7, 3, 1, 12]
+# "hmc" - slow, accurate; "vb" - fast, less accurate
+ouija_inference: 'vb'

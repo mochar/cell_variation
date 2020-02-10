@@ -1,0 +1,1 @@
+snakemake velocity --use-conda --jobs 100 --configfile config/hipp_truncated.yaml --cluster-config config/cluster.json --cluster "sbatch --mem={cluster.mem} --cpus-per-task={cluster.cpuspertask} --time={cluster.time} --partition={cluster.partition} --qos={cluster.qos} --gres={cluster.gres}"
